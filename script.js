@@ -29,14 +29,14 @@ console.log(areEqual(myNumber,stringValue));
    */
 // ===== YES, I did reuse code.
   // Do you see any other functions where code could be reused?
-// ====== YES, multiply(x,x) for square(x), and increse(n)  for restaurant.reviews++
+// ===== YES, multiply(x,x) for square(x), and increse(n)  for restaurant.reviews++
   /**
    * For your `letterGrade` function,
    * what happens if you provide a `score` that is less than 0,
    * or greater than the `total` value?
    * Does it still work as expected? If it doesn't, how could you improve this?
    */
-// ====== YES, still works, but result is undefined.  Perhaps -1 could be returned.
+// ===== YES, still works, but result is undefined.  Perhaps -1 could be returned.
   /**
    * Your `combine` function looks okay,
    * but what if you wanted to join it with ANY string instead of a single space?
@@ -56,5 +56,5 @@ improvedCombine("combine","improved","is");
   // combine = improvedCombine;
   // console.log(combine('combine', 'improved!', ' is '));
 
-// ====== HMMM...cannot assign a function.
+// ===== HMMM...cannot assign a function.
 }
