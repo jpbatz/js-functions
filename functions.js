@@ -90,7 +90,7 @@ function calculate(operation,x,y) {
       console.log(x + " * " + y + " = " + result);
       break;
     case "divide":
-      result=multiply(x,y);
+      result=divide(x,y);
       console.log(x + " / " + y + " = " + result);
       break;
     default:
@@ -206,13 +206,13 @@ function letterGrade(score,total) {
 
   if (numGrade >= 90 && numGrade <= 100) {
     return "A";
-  } else if (numGrade >= 80 && numGrade <= 89) {
+  } else if (numGrade >= 80 && numGrade < 90) {
     return "B";
-  } else if (numGrade >= 70 && numGrade <= 79) {
+  } else if (numGrade >= 70 && numGrade < 80) {
     return "C";
-  } else if (numGrade >= 60 && numGrade <= 70) { // test should test for <= 69, not 70
+  } else if (numGrade >= 60 && numGrade < 70) { // test should test for <= 69, not 70
     return "D";
-  } else if (numGrade >= 0 && numGrade <= 59) {
+  } else if (numGrade >= 0 && numGrade < 60) {
     return "F";
   } 
 }
@@ -223,8 +223,10 @@ function letterGrade(score,total) {
  * @param {object} restaurant represents a restaurant
  */
 function incrementReviews(restaurant) {
-  if(restaurant.reviews) {
-    restaurant.reviews++;
+  if((restaurant.hasOwnProperty('reviews'))&&(typeof restaurant.reviews === 'number')) {
+    //restaurant.reviews = increase(restaurant.reviews);
+    restaurant.reviews += restaurant.reviews;
+
   } else {
     restaurant.reviews = 1;
   }
