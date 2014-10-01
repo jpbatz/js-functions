@@ -32,7 +32,7 @@ console.log("that's correct, because areEqual() uses '===' strict comparison.");
 console.log("employed 'reusability' concept with calculate().");
   // Do you see any other functions where code could be reused?
 // ===== YES, multiply(x,x) for square(x), and increse(n) in restaurant.reviews++
-console.log("functions were used: multiply(x,x) for square(x), and increse(n) in restaurant.reviews++");
+console.log("functions were used: multiply(x,x) for square(x), and increase(n) in restaurant.reviews++");
   /**
    * For your `letterGrade` function,
    * what happens if you provide a `score` that is less than 0,
