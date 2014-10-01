@@ -224,32 +224,13 @@ function letterGrade(score,total) {
  */
 function incrementReviews(restaurant) {
 
-//console.log(typeof restaurant + " is " + typeof restaurant.reviews);
-
-//if(restaurant.hasOwnProperty("reviews")) {  // test for existence
-//if(typeof restaurant.reviews === 'number') {
-//if(restaurant.reviews.exists()) {
   if(restaurant.reviews) {
-  //return {reviews: reviews++};
-  //return {reviews: restaurant.reviews++}; // this returns object {reviews: 1777} -> fails
-  //return increase(restaurant.reviews);  // this returns number 1777 -> fails
-
-  //restaurant.reviews++;
-  //increase(restaurant.reviews);
-  //return restaurant.reviews;
-
-  //return restaurant.reviews++;
-
     restaurant.reviews = increase(restaurant.reviews);
-    return restaurant;
-
-//} else if(typeof restaurant.reviews === 'undefined') {
   } else {
-  //restaurant.reviews: 1;
-  //return 1;           // returns simple number 1     -> fails
-    return {reviews: 1};  // returns object {reviews: 1} -> passes
+    restaurant = {reviews: 1};
   }
-  //console.log("value is " + restaurant.reviews);
+  return restaurant;
+
 }
 /**
  * Joins two strings with a space.
