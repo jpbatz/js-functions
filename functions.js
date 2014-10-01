@@ -64,7 +64,7 @@ function divide(x,y) {
  * @return {number} squared
  */
 function square(x) {
-  return x*x;
+  return multiply(x,x);
 }
 /**
  * Performs a mathematical operation on two numbers.
@@ -223,13 +223,18 @@ function letterGrade(score,total) {
  * @param {object} restaurant represents a restaurant
  */
 function incrementReviews(restaurant) {
-  if((restaurant.hasOwnProperty('reviews'))&&(typeof restaurant.reviews === 'number')) {
-    //restaurant.reviews = increase(restaurant.reviews);
-    restaurant.reviews += restaurant.reviews;
 
-  } else {
-    restaurant.reviews = 1;
-  }
+console.log(typeof restaurant + " is " + typeof restaurant.reviews);
+
+//if(typeof restaurant.reviews === 'number') {
+//if(restaurant.reviews.exists()) {
+if(restaurant.reviews) {
+  return this.reviews++;
+//} else if(typeof restaurant.reviews === 'undefined') {
+} else {
+  restaurant.reviews = 1;
+}
+  console.log("value is " + restaurant.reviews);
 }
 /**
  * Joins two strings with a space.
